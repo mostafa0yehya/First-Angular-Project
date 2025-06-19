@@ -1,0 +1,21 @@
+
+h5 {
+  color: var(--heading-color);
+  font-size: 25px;
+  font-weight: 500;
+}
+p {
+  color: var(--black);
+}
+ul.links li,
+ul.social li,
+ul.social li a {
+  transition: 0.3s color ease;
+}
+li a:hover,
+ul.social li a:hover {
+  color: var(--primary) !important;
+}
+ul.social li a {
+  font-size: 19px;
+}

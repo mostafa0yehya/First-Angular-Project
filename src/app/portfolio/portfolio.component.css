@@ -1,0 +1,27 @@
+.card {
+  transition: 0.3s box-shadow ease, 0.3s transform ease;
+  cursor: pointer;
+}
+.card:hover {
+  box-shadow: 0 4px 8px rgba(94, 59, 238, 0.5);
+  border-color: white;
+  transform: scale(1.02);
+}
+.card img {
+  object-fit: cover;
+  height: 250px;
+}
+.card-content h3 {
+  color: var(--heading-color);
+  font-size: 24px;
+}
+.card-content p {
+  color: var(--black);
+}
+.tech-stack span {
+  background-color: #d2c7ff;
+  margin-left: 5px;
+  padding: 3px 6px;
+  border-radius: 5px;
+  color: #5e3bee;
+}

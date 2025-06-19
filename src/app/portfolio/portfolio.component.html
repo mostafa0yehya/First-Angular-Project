@@ -1,0 +1,35 @@
+<div id="portfolio" class="mt-5 py-5">
+  <div class="container py-lg-5">
+    <div class="row gy-4">
+      @for (item of projects; track item.id) {
+      <div class="col-lg-4">
+        <div
+          class="card h-100"
+          data-bs-toggle="modal"
+          data-bs-target="#staticBackdrop"
+          (click)="setSelectedProject(item)"
+        >
+          <img class="w-100 rounded" [src]="item.image" alt="Web Development" />
+          <div class="card-content p-3">
+            <h3>{{ item.title }}</h3>
+            <p>{{ item.description.split(" ", 10).join(" ") + "..." }}</p>
+            <div class="tech-stack d-flex align-items-center">
+              @for (tech of item.technologies; track $index) { @if ($index<2) {
+              <span>{{ tech }}</span>
+
+              } } @if(item.technologies.length>3){
+              <span class="bg-transparent"
+                >+{{ item.technologies.length - 2 }} more</span
+              >
+
+              }
+            </div>
+          </div>
+        </div>
+      </div>
+
+      }
+    </div>
+  </div>
+</div>
+<app-modal [projectDetails]="selectedProject"></app-modal>

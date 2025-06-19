@@ -1,0 +1,96 @@
+<div id="contact" class="my-5 py-5">
+  <div class="container">
+    <div class="contact-head text-center mb-5">
+      <app-heading>
+        <span>Get In Touch </span>
+        <h2 class="my-2">Contact me</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </app-heading>
+    </div>
+
+    <form action="" class="w-75 mx-auto">
+      <div class="row">
+        <div class="col-md-6 mb-3 form-group">
+          <label for="firstName" #firstNameLabel class="form-label"
+            >First Name</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="firstName"
+            placeholder="First Name"
+            (focus)="add(firstNameLabel)"
+            (blur)="remove(firstNameLabel)"
+          />
+        </div>
+        <div class="col-md-6 mb-3 form-group">
+          <label for="lastName" #lastNameLabel class="form-label"
+            >Last Name</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="lastName"
+            placeholder="Last Name"
+            (focus)="add(lastNameLabel)"
+            (blur)="remove(lastNameLabel)"
+          />
+        </div>
+      </div>
+
+      <div class="mb-3 form-group">
+        <label for="email" #emailLabel class="form-label">Email address</label>
+        <input
+          type="email"
+          class="form-control"
+          id="email"
+          placeholder="name@example.com"
+          (focus)="add(emailLabel)"
+          (blur)="remove(emailLabel)"
+        />
+      </div>
+
+      <div class="mb-3 form-group">
+        <label for="phone" #phoneLabel class="form-label">Phone Number</label>
+        <input
+          type="tel"
+          class="form-control"
+          id="phone"
+          placeholder="+20 100 123 4567"
+          (focus)="add(phoneLabel)"
+          (blur)="remove(phoneLabel)"
+        />
+      </div>
+
+      <div class="mb-3 form-group">
+        <label for="topic" #topicLabel class="form-label">Choose a Topic</label>
+        <select
+          class="form-select"
+          id="topic"
+          (focus)="add(topicLabel)"
+          (blur)="remove(topicLabel)"
+        >
+          <option selected disabled>Select one...</option>
+          <option value="general">General Inquiry</option>
+          <option value="project">Project Discussion</option>
+          <option value="support">Support</option>
+        </select>
+      </div>
+
+      <div class="mb-3 form-group">
+        <label for="message" #messageLabel class="form-label">Message</label>
+        <textarea
+          class="form-control"
+          id="message"
+          rows="4"
+          placeholder="Write your message..."
+          (focus)="add(messageLabel)"
+          (blur)="remove(messageLabel)"
+        ></textarea>
+      </div>
+      <button (click)="prevent($event)" class="contact-btn">
+        Send Message
+      </button>
+    </form>
+  </div>
+</div>

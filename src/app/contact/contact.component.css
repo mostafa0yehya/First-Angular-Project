@@ -1,0 +1,20 @@
+p {
+  color: var(--black);
+}
+.form-group {
+  position: relative;
+}
+.form-group input,
+textarea,
+select {
+  position: relative;
+}
+label {
+  position: relative;
+  transition: 0.3s top;
+  top: 40px;
+  display: block;
+}
+.top-0 {
+  top: 0;
+}

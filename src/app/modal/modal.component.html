@@ -1,0 +1,35 @@
+<div
+  class="modal fade"
+  id="staticBackdrop"
+  tabindex="-1"
+  aria-labelledby="staticBackdropLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-scrollable modal-lg">
+    <div class="modal-content">
+      <div class="modal-header ">
+        <img
+          [src]="projectDetails?.image"
+          alt=""
+        />
+      </div>
+      <div class="modal-body">
+        <h3>{{ projectDetails?.title }}</h3>
+        <p>{{ projectDetails?.description }}</p>
+        <div>
+          <strong>Technologies:</strong>
+          <ul>
+            @for (tech of projectDetails?.technologies; track $index) {
+            <li>{{ tech }}</li>
+            }
+          </ul>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
