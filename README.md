@@ -2,6 +2,11 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.6.
 
+## 🌐 Live Demo
+
+Check out the live version of the project here:  
+👉 [https://first-angular-project-tawny.vercel.app/](https://first-angular-project-tawny.vercel.app/)
+
 ## Development server
 
 To start a local development server, run:
